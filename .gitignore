@@ -12,6 +12,9 @@ library_mgmt
 !library_mgmt.cpp
 !library_mgmt.md
 
+# Build directory
+bin/
+
 # OS metadata
 .DS_Store
 Thumbs.db
