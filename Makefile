@@ -2,7 +2,6 @@
 CXX ?= clang++
 CXXFLAGS = -std=c++17 -Wall -Wextra -pedantic
 BIN_DIR = bin
-SRCS = $(shell find basics -name "*.cpp" | sort)
 
 .PHONY: all help check build-all run clean
 
@@ -18,27 +17,19 @@ help:
 	@echo "  make clean           - Remove binaries and build artifacts"
 	@echo "=========================================================="
 	@echo "  Examples:"
-	@echo "    make run FILE=basics/library_mgmt.cpp"
-	@echo "    make run FILE=basics/0_sample_pgms/pgm000.cpp"
+	@echo "    make run FILE=src/library_mgmt.cpp"
+	@echo "    make run FILE=src/0_sample_pgms/pgm000.cpp"
 	@echo "=========================================================="
 
 check:
 	@echo "Checking syntax of all C++ files with $(CXX)..."
-	@failed=0; \
-	for f in $(SRCS); do \
-		echo "Verifying $$f..."; \
-		$(CXX) $(CXXFLAGS) -fsyntax-only "$$f" || failed=1; \
-	done; \
-	if [ $$failed -eq 0 ]; then \
-		echo "All 107 C++ files passed verification!"; \
-	else \
-		echo "Verification failed on some files."; exit 1; \
-	fi
+	@find src -name "*.cpp" -exec $(CXX) $(CXXFLAGS) -fsyntax-only {} +
+	@echo "All 107 C++ files passed verification!"
 
 build-all:
 	@mkdir -p $(BIN_DIR)
 	@echo "Compiling all programs into $(BIN_DIR)/..."
-	@for f in $(SRCS); do \
+	@find src -name "*.cpp" | while IFS= read -r f; do \
 		base=$$(basename "$$f" .cpp); \
 		echo "Building $$base..."; \
 		$(CXX) $(CXXFLAGS) "$$f" -o "$(BIN_DIR)/$$base" || exit 1; \
@@ -48,7 +39,7 @@ build-all:
 run:
 	@if [ -z "$(FILE)" ]; then \
 		echo "Usage: make run FILE=<path-to-cpp>"; \
-		echo "Example: make run FILE=basics/library_mgmt.cpp"; \
+		echo "Example: make run FILE=src/library_mgmt.cpp"; \
 		exit 1; \
 	fi
 	@mkdir -p $(BIN_DIR)
@@ -60,6 +51,6 @@ run:
 
 clean:
 	@rm -rf $(BIN_DIR)
-	@find basics -type f -perm +111 -not -name "*.cpp" -not -name "*.md" -delete 2>/dev/null || true
-	@rm -rf basics/**/**/*.dSYM 2>/dev/null || true
+	@find src -type f -perm +111 -not -name "*.cpp" -not -name "*.md" -delete 2>/dev/null || true
+	@rm -rf src/**/**/*.dSYM 2>/dev/null || true
 	@echo "All binaries and artifacts cleaned up."

@@ -22,31 +22,11 @@ jobs:
     - name: Verify All C++ Files (g++)
       run: |
         echo "Testing all C++ files with g++ (C++17)..."
-        failed=0
-        for f in $(find basics -name "*.cpp" | sort); do
-          g++ -std=c++17 -Wall -Wextra -fsyntax-only "$f" || {
-            echo "Failed to compile $f with g++"
-            failed=1
-          }
-        done
-        if [ $failed -ne 0 ]; then
-          echo "Build failed on one or more files."
-          exit 1
-        fi
+        find src -name "*.cpp" -exec g++ -std=c++17 -Wall -Wextra -fsyntax-only {} +
         echo "All files passed g++ check!"
 
     - name: Verify All C++ Files (clang++)
       run: |
         echo "Testing all C++ files with clang++ (C++17)..."
-        failed=0
-        for f in $(find basics -name "*.cpp" | sort); do
-          clang++ -std=c++17 -Wall -Wextra -fsyntax-only "$f" || {
-            echo "Failed to compile $f with clang++"
-            failed=1
-          }
-        done
-        if [ $failed -ne 0 ]; then
-          echo "Build failed on one or more files."
-          exit 1
-        fi
+        find src -name "*.cpp" -exec clang++ -std=c++17 -Wall -Wextra -fsyntax-only {} +
         echo "All files passed clang++ check!"

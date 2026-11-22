@@ -3,7 +3,7 @@
 [![C++ CI](https://github.com/amankrrishav/cpp/actions/workflows/ci.yml/badge.svg)](https://github.com/amankrrishav/cpp/actions)
 [![C++ Standard](https://img.shields.io/badge/Standard-C%2B%2B17%20%2F%20C%2B%2B20-00599C?logo=c%2B%2B&logoColor=white)](https://en.cppreference.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Programs](https://img.shields.io/badge/Programs-107%20Handwritten-orange.svg)](basics/)
+[![Programs](https://img.shields.io/badge/Programs-107%20Handwritten-orange.svg)](src/)
 [![Clean Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)](#quick-start--how-to-run)
 
 > **Hey there! 👋**  
@@ -32,23 +32,23 @@ Here is how the concepts progress through this repository:
 
 | Stage | Folder | What You'll Learn | Notable Files |
 |:---|:---|:---|:---|
-| **0. Hello World & I/O** | [`basics/0_sample_pgms/`](basics/0_sample_pgms/) | Standard I/O streams (`cin`, `cout`, `endl`), basic formatting, arithmetic | `pgm000`, `pgm004`, `pgm005` |
-| **1. Variables & Types** | [`basics/a_variables/`](basics/a_variables/) | Variable initialization types (`{}` list init vs `=`), primitive data types | `pgm0001`, `pgm002` |
-| **2. Primitives & Limits** | [`basics/b_primitive_types/`](basics/b_primitive_types/) | Signed vs unsigned, overflow safety, character representations | `pgm006`, `pgm007` |
-| **3. Memory Footprint** | [`basics/c_size_of_operators/`](basics/c_size_of_operators/) | `sizeof` operator, machine limits, `<climits>`, `<cfloat>` | `pgm008` |
-| **4. Constants & Math** | [`basics/d_constants/`](basics/d_constants/) | `const` keyword, literal constants, change calculation challenge | `imp_pgm`, `pgm009`, `pgm010` |
-| **5. Static Arrays** | [`basics/e_arrays/`](basics/e_arrays/) | Stack-allocated fixed arrays, indexing, array bounds pitfalls | `pgm011` |
-| **6. Dynamic Vectors** | [`basics/f_vectors/`](basics/f_vectors/) | `std::vector`, `.push_back()`, bounds-checked `.at()`, 2D vectors | `pgm012`, `pgm014`, `pgmr02` |
-| **7. Operators & Casting** | [`basics/g_Operators/`](basics/g_Operators/) | Precedence, prefix/postfix (`++`), `static_cast`, `boolalpha`, logic | `pgm016`–`pgm023` |
-| **8. Control Flow** | [`basics/h_control_pgm_flow/`](basics/h_control_pgm_flow/) | `if`, `if-else`, nested conditionals, `switch` on `enum`, ternary `?:` | `pgm024`–`pgm033` |
-| **9. Loops & Iteration** | [`basics/i_loop/`](basics/i_loop/) | `for`, C++11 range-based for, `while`, `do-while`, histograms, Collatz | `pgm034`–`pgm050` |
-| **10. Strings & Ciphers** | [`basics/j_characters_&_strings/`](basics/j_characters_&_strings/) | C-style `char[]` vs `std::string`, string methods, Substitution Cipher | `pgm046`, `pgm047`, `pgm048` |
-| **11. Functions & Memory** | [`basics/k_functions/`](basics/k_functions/) | Prototypes, pass-by-value vs pass-by-reference (`&`), call stack, recursion | `pgm051`–`pgm066` |
-| **12. Pointers & Heap** | [`basics/l_pointers_&_refrences/`](basics/l_pointers_&_refrences/) | Addresses `&`, dereference `*`, `new`/`delete`, pointer arithmetic, `const` ptrs | `pgm067`–`pgm079` |
-| **13. OOP Fundamentals** | [`basics/m_OOPS/`](basics/m_OOPS/) | Classes, objects, `public`/`private`, member methods (`::`), constructors | `pgm080`–`pgm086` |
-| **14. The STL Mastery** | [`basics/n_(STL)/`](basics/n_(STL)/) | Templates, `vector`, `list`, `deque`, `stack`, `queue`, `map`, `set` | `pgm087`–`pgm100` |
-| **15. Advanced Templates** | [`basics/o_extras/`](basics/o_extras/) | Template default types, specialization for strings, generic inheritance | `pgm101`–`pgm103` |
-| **16. Capstone Project** | [`basics/library_mgmt.cpp`](basics/library_mgmt.cpp) | Full Library System: `Storage<T>`, `Book`, `new`/`delete`, 4 STL containers | `library_mgmt.cpp` |
+| **0. Hello World & I/O** | [`src/0_sample_pgms/`](src/0_sample_pgms/) | Standard I/O streams (`cin`, `cout`, `endl`), basic formatting, arithmetic | `pgm000`, `pgm004`, `pgm005` |
+| **1. Variables & Types** | [`src/a_variables/`](src/a_variables/) | Variable initialization types (`{}` list init vs `=`), primitive data types | `pgm0001`, `pgm002` |
+| **2. Primitives & Limits** | [`src/b_primitive_types/`](src/b_primitive_types/) | Signed vs unsigned, overflow safety, character representations | `pgm006`, `pgm007` |
+| **3. Memory Footprint** | [`src/c_size_of_operators/`](src/c_size_of_operators/) | `sizeof` operator, machine limits, `<climits>`, `<cfloat>` | `pgm008` |
+| **4. Constants & Math** | [`src/d_constants/`](src/d_constants/) | `const` keyword, literal constants, change calculation challenge | `imp_pgm`, `pgm009`, `pgm010` |
+| **5. Static Arrays** | [`src/e_arrays/`](src/e_arrays/) | Stack-allocated fixed arrays, indexing, array bounds pitfalls | `pgm011` |
+| **6. Dynamic Vectors** | [`src/f_vectors/`](src/f_vectors/) | `std::vector`, `.push_back()`, bounds-checked `.at()`, 2D vectors | `pgm012`, `pgm014`, `pgmr02` |
+| **7. Operators & Casting** | [`src/g_Operators/`](src/g_Operators/) | Precedence, prefix/postfix (`++`), `static_cast`, `boolalpha`, logic | `pgm016`–`pgm023` |
+| **8. Control Flow** | [`src/h_control_pgm_flow/`](src/h_control_pgm_flow/) | `if`, `if-else`, nested conditionals, `switch` on `enum`, ternary `?:` | `pgm024`–`pgm033` |
+| **9. Loops & Iteration** | [`src/i_loop/`](src/i_loop/) | `for`, C++11 range-based for, `while`, `do-while`, histograms, Collatz | `pgm034`–`pgm050` |
+| **10. Strings & Ciphers** | [`src/j_characters_&_strings/`](src/j_characters_&_strings/) | C-style `char[]` vs `std::string`, string methods, Substitution Cipher | `pgm046`, `pgm047`, `pgm048` |
+| **11. Functions & Memory** | [`src/k_functions/`](src/k_functions/) | Prototypes, pass-by-value vs pass-by-reference (`&`), call stack, recursion | `pgm051`–`pgm066` |
+| **12. Pointers & Heap** | [`src/l_pointers_&_refrences/`](src/l_pointers_&_refrences/) | Addresses `&`, dereference `*`, `new`/`delete`, pointer arithmetic, `const` ptrs | `pgm067`–`pgm079` |
+| **13. OOP Fundamentals** | [`src/m_OOPS/`](src/m_OOPS/) | Classes, objects, `public`/`private`, member methods (`::`), constructors | `pgm080`–`pgm086` |
+| **14. The STL Mastery** | [`src/n_(STL)/`](src/n_(STL)/) | Templates, `vector`, `list`, `deque`, `stack`, `queue`, `map`, `set` | `pgm087`–`pgm100` |
+| **15. Advanced Templates** | [`src/o_extras/`](src/o_extras/) | Template default types, specialization for strings, generic inheritance | `pgm101`–`pgm103` |
+| **16. Capstone Project** | [`src/library_mgmt.cpp`](src/library_mgmt.cpp) | Full Library System: `Storage<T>`, `Book`, `new`/`delete`, 4 STL containers | `library_mgmt.cpp` |
 
 ---
 
@@ -74,7 +74,7 @@ Confused about `const int*` vs `int* const`?
 
 ## 🏆 Capstone: Library Management System
 
-Located at [`basics/library_mgmt.cpp`](basics/library_mgmt.cpp) (and detailed in [`basics/library_mgmt.md`](basics/library_mgmt.md)), this capstone ties everything together into a clean, unified project:
+Located at [`src/library_mgmt.cpp`](src/library_mgmt.cpp) (and detailed in [`src/library_mgmt.md`](src/library_mgmt.md)), this capstone ties everything together into a clean, unified project:
 
 - **Template Class (`Storage<T>`)**: A generic container that logs all system actions.
 - **OOP (`Book` class)**: Encapsulated attributes (`title`, `author`, `genre`, `price`) with clean constructor initialization.
@@ -100,13 +100,13 @@ You can compile and run any individual program with a single command:
 
 ```bash
 # Run Hello World
-make run FILE=basics/0_sample_pgms/pgm000.cpp
+make run FILE=src/0_sample_pgms/pgm000.cpp
 
 # Run the Substitution Cipher
-make run FILE=basics/j_characters_&_strings/pgm048.cpp
+make run FILE=src/j_characters_&_strings/pgm048.cpp
 
 # Run the Capstone Library Management System
-make run FILE=basics/library_mgmt.cpp
+make run FILE=src/library_mgmt.cpp
 ```
 
 ### 3. Verify all 107 programs
