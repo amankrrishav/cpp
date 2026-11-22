@@ -2,6 +2,7 @@
 // top ele= highest p
 // bottom ele= lowest p
 #include <iostream>
+#include <vector>
 #include<queue>
 
 using namespace std;

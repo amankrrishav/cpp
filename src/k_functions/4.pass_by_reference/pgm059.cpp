@@ -1,7 +1,8 @@
 //pass by reference 
 //
 //take vector example - pass by value
-#include<iostream>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 void mystery(int &a, int &b); //prototype 1

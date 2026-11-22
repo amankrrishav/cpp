@@ -1,7 +1,8 @@
 //C -STYLE STRING
 //examples
 
-#include<iostream>
+#include <iostream>
+#include <cstring>
 using namespace std;
 
 int main(){
