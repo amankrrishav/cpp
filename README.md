@@ -354,7 +354,8 @@ A comprehensive, hands-on repository tracking progressive learning and practical
 | `pgm101` | `basics/o_extras/pgm101.cpp` | Extras & Templates | Class template default types and full specialization |
 | `pgm102` | `basics/o_extras/pgm102.cpp` | Extras & Templates | Class template inheritance (`Dog` inheriting from `Animal<T>`) |
 | `pgm103` | `basics/o_extras/pgm103.cpp` | Extras & OOP | `Book` class with dynamic heap allocation and method dispatch |
-| `Capstone` | `basics/library_mgmt.md` | Capstone Project | Full architecture requirements for Library Management System |
+| `Capstone` | `basics/library_mgmt.cpp` | Capstone Project | Full implementation of Library Management System (`Storage<T>`, `Book`, `new`/`delete`, and 4 STL containers) |
+| `Capstone Spec` | `basics/library_mgmt.md` | Capstone Project | Architecture & problem requirements document |
 
 ---
 

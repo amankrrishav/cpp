@@ -8,6 +8,9 @@ pgm*
 !pgm*.cpp
 imp_pgm
 !imp_pgm.cpp
+library_mgmt
+!library_mgmt.cpp
+!library_mgmt.md
 
 # OS metadata
 .DS_Store
